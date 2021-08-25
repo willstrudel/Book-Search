@@ -32,7 +32,9 @@ input bookInput {
     link: String     
 }
 
-
+type Query {
+    me: User
+}
 
 type Mutation {
     login(email: String!, password: String!): Auth
@@ -42,7 +44,3 @@ type Mutation {
 }`;
 
 module.exports = typeDefs;
-
-// type Query {
-//     me: User
-// }
