@@ -38,9 +38,9 @@ type Mutation {
     removeBook(bookId: ID!): User
 }
 
-type: Auth {
+type Auth {
     token: ID!
     user: User
-}`
+}`;
 
 module.exports = typeDefs;
