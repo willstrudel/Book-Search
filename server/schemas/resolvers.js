@@ -1,14 +1,9 @@
-const {
-    Book
-} = require('../models');
+const {User} = require('../models');
+const {AuthenticationError} = require ('apollo-server-express');
+const {signToken} = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        books: async () => {
-            return await Book.find({}).populate({
-                path: 'books',
-                populate: 'author',
-            });
         },
 
         Mutation: {
@@ -116,7 +111,7 @@ const resolvers = {
             },
         },
 
-    },
-};
+    };
+
 
 module.exports = resolvers;
